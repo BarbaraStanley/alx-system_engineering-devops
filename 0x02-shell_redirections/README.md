@@ -6,3 +6,4 @@ task 3 display the content of the /etc/passwd file and /etc/hosts file
 task 4 display the last 10 lines of the /etc/passwd file
 task 5 display the first 10 lines of the /etc/passwd file
 task 6 display the third line of the file iacta
+task 7 Write a shell script that creates a file named exactly \*\'Best School\'\*$\?\*\*\*\*\*:\)
