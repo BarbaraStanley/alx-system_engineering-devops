@@ -9,3 +9,4 @@ task 6 display the third line of the file iacta
 task 7 Write a shell script that creates a file named exactly \*\'Best School\'\*$\?\*\*\*\*\*:\)
 Task 8, a script that writes into the file ls cwd content the rsult of the command ls -la
 Task 9 a script that duplicates the last line of the file iacta
+Task 10 a script that deletes all the regular files (not the directories) with a .js extension present in the current directory
