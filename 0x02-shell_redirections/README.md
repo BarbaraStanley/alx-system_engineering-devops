@@ -15,3 +15,4 @@ Task 12 a script that displays the 10 newest files in the current directory
 Task 13  a script that takes a list of words as input and prints only words that appear exactly once
 Task 14 a script that displa lines containing the pattern ROOT from the passwd file
 Task 15 a script that displays lines containing the pattern BIN in the passwd file
+Task 16 a script that displays lines containing the pattern ROOT and 3 lines after them in the passwd file
