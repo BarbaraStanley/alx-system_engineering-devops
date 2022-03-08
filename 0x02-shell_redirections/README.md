@@ -14,3 +14,4 @@ Task 11 a script that counts the number of directories and sub directories in th
 Task 12 a script that displays the 10 newest files in the current directory
 Task 13  a script that takes a list of words as input and prints only words that appear exactly once
 Task 14 a script that displa lines containing the pattern ROOT from the passwd file
+Task 15 a script that displays lines containing the pattern BIN in the passwd file
