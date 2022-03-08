@@ -16,3 +16,4 @@ Task 13  a script that takes a list of words as input and prints only words that
 Task 14 a script that displa lines containing the pattern ROOT from the passwd file
 Task 15 a script that displays lines containing the pattern BIN in the passwd file
 Task 16 a script that displays lines containing the pattern ROOT and 3 lines after them in the passwd file
+Task 17 a script that displays all the lines in the passwd file that do not contain the pattern BIN
