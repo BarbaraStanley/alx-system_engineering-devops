@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Displays 
 
-trap 'echo "I am invinsible!!!"' 15
+trap 'echo "I am invincible!!!"' 15
 
 while true
 do
