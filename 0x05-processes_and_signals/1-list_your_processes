@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Displays a list of all running process for all users
+
+ps aux
