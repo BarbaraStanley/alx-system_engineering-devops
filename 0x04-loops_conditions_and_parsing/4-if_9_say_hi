@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# A script that displays Best School 10 times, for the 9th iteration, \
+# displays Best School, then Hi on a new line using while loop and if statement
+
+i=0
+while [[ $i -lt 10 ]]
+do
+	echo "Best School"
+	if [[ $i -eq 9 ]]
+	then
+	    echo "Hi"
+	fi
+	i=$((i+1))
+done
