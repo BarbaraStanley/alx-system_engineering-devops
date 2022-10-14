@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Displays 
+
+trap 'echo "I am invinsible!!!"' 15
+
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
