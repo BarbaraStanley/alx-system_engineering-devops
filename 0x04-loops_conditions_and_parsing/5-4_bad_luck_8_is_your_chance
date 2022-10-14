@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#Script description in multiple line comment below:
 : '
 A script that loops from 1 to 10 and:
 
