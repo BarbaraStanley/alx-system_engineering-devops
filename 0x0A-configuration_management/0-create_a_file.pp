@@ -1,6 +1,6 @@
 # a manifest that creates a file 'school' in /tmp with 0744 permission and contains 'I love Puppet'
 
-file{ 'create school' :
+file{ 'school' :
   ensure  => present,
   path    => /tmp/school,
   content => 'I love Puppet',
