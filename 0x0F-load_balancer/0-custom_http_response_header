@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# A script that configures a brand new Ubuntu machine to be identical to web-01(nginx installed), Configure Nginx so that its HTTP response contains a custom header (on web-01 and web-02)
+
+sudo apt update
+sudo apt install -y nginx
+sudo ufw allow 'Nginx HTTP'
+echo "Hello World!" | sudo tee /var/www/html/index.html
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/error.html
+echo "
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+        root /var/www/html;
+        index index.html index.htm index.nginx-debian.html;
+
+        error_page 404 /error.html;
+        location = /error.html {
+                root /var/www/html;
+                internal;
+        }
+
+        location /redirect_me {
+               return 301 https://google.com;
+       }
+
+	location / {
+		add_header X-Served-By $HOSTNAME;
+	}
+}" | sudo tee /etc/nginx/sites-available/default
+sudo service nginx restart
