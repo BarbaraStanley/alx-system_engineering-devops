@@ -3,9 +3,18 @@
 
 nosub () {
 	digg="dig $2.$1"
-	sub=$($digg | grep -A1 'ANSWER SECTION:' | cut -d '.' -f1 | tail -1)
-	record=$($digg | grep -A1 'ANSWER SECTION:' | cut -d $'\t' -f4 | tail -1)
-	dest=$($digg | grep -A1 'ANSWER SECTION:' | cut -d $'\t' -f5 | tail -1)
+
+	if [  "$2" == 'web-01' ] || [  "$2" == 'web-02' ]
+	then 
+		
+		sub=$($digg | grep -A1 'ANSWER SECTION:' | cut -d '.' -f1 | tail -1)
+		record=$($digg | grep -A1 'ANSWER SECTION:' | cut -d $'\t' -f3 | tail -1)
+		dest=$($digg | grep -A1 'ANSWER SECTION:' | cut -d $'\t' -f4 | tail -1)
+	 else
+		sub=$($digg | grep -A1 'ANSWER SECTION:' | cut -d '.' -f1 | tail -1)
+		record=$($digg | grep -A1 'ANSWER SECTION:' | cut -d $'\t' -f4 | tail -1)
+		dest=$($digg | grep -A1 'ANSWER SECTION:' | cut -d $'\t' -f5 | tail -1)
+	fi
 	echo "$sub $record $dest" | awk '{print "The subdomain", $1, "is a",$2, "record and points to", $3}'
 }
 
@@ -22,5 +31,6 @@ if [[ $# -eq 2 ]];
 then
 {
 	nosub "$1" "$2"
+
 }
 fi
