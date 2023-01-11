@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 #Bash script that to automate a fix to what’s keeping your Ubuntu container’s Nginx installation from listening on port 80
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx start
 pkill -1 nginx
