@@ -9,11 +9,15 @@ if __name__ == "__main__":
     eid = sys.argv[1]
 
     userid = eid
-    username = requests.get('https://jsonplaceholder.typicode.com/users/{}'.format(eid)).json()
-    
-    task_cs = requests.get('https://jsonplaceholder.typicode.com/todos', params={'userId': eid}).json()
-    
-    filename = eid+'.csv'
+    username = requests.get(
+        'https://jsonplaceholder.typicode.com/users/{}'.format(eid)).json()
+
+    task_cs = requests.get(
+        'https://jsonplaceholder.typicode.com/todos',
+        params={
+            'userId': eid}).json()
+
+    filename = eid + '.csv'
     newlist = []
 
     for i in task_cs:
