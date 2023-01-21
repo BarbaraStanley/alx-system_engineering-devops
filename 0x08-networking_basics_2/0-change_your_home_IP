@@ -2,7 +2,7 @@
 # a Bash script that configures an Ubuntu server:
 # localhost resolves to 127.0.0.2 and facebook.com resolves to 8.8.8.8
 
-cp /etc/hosts ~/newhosts
-echo -e "127.0.0.2\tlocalhost" > ~/newhosts
-echo -e "8.8.8.8\tfacebook.com" >> ~/newhosts
-cp -f ~/newhosts /etc/hosts
+cp /etc/hosts ~/hosts.new
+echo -e "127.0.0.2\tlocalhost" > ~/hosts.new
+echo -e "8.8.8.8\tfacebook.com" >> ~/hosts.new
+cp -f ~/hosts.new /etc/hosts
