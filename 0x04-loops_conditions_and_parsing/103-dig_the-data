@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# script that displays and sorts visitor IP, HTTP status code from Apache log
+
+awk '{print $1 " " $9}' apache-access.log | sort | uniq -c | sort -rn
