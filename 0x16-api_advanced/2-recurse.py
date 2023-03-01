@@ -5,7 +5,7 @@ titles of all hot articles for a given subreddit """
 import requests
 
 
-def recurse(subreddit, hot_list=[]):
+def recurse(subreddit, hot_list=[], after="", count=0):
     """ recursive function """
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     params = {"after": after, "count": count, "limit": 100}
