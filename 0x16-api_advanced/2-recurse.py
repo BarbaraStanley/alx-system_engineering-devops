@@ -9,15 +9,15 @@ def recurse(subreddit, hot_list=[], after="", count=0):
     """ recursive function """
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     params = {"after": after, "count": count, "limit": 100}
-    headers = {
+    headr = {
             "User-Agent": "linux:0x16.api.advanced:v1.0 (by /u/kemitche)"
     }
-    result = requests.get(url, headers=headers, params=params, allow_redirects=False)
+    r = requests.get(url, headers=headr, params=params, allow_redirects=False)
 
-    if result.status_code != 200:
+    if r.status_code != 200:
         return
 
-    res = result.json().get("data")
+    res = r.json().get("data")
     after = res.get("after")
     count += res.get("dist")
     for c in res.get("children"):
