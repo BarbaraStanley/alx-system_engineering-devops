@@ -1,7 +1,7 @@
 package { 'nginx': ensure => installed }
 file { '/etc/default/nginx':
   ensure  => file,
-  content => 'ULIMIT="-n 4096"\n',
+  content => 'ULIMIT="-n 4096"',
   require => Package['nginx'],
   notify  => Service['nginx'],
 }
